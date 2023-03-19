@@ -43,7 +43,8 @@ const Page = () => {
       const renderTask = page.render(renderContext)
       renderTask.promise.then(() => {
         document
-          .getElementById('evilFlowersContent')
+        .getElementById('evilFlowersContent')
+        //@ts-ignore
           ?.replaceChildren(container)
         document.getElementById('evilFlowersContent')?.appendChild(canvas)
       })
